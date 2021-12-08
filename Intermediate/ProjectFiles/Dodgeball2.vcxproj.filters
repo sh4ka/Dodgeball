@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Dodgeball2.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{CBC8DD2C-4D27-41B3-B067-993EA9CF90AF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Dodgeball2.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Dodgeball2Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{5885C0DD-8CDF-4453-A18C-E09981C71810}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Dodgeball2">
+      <UniqueIdentifier>{C5BED0D0-113C-4BFB-B32A-C64DFB16407B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Dodgeball2\Dodgeball2.Build.cs">
+      <Filter>Source\Dodgeball2</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Dodgeball2\Dodgeball2.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\Dodgeball2.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Dodgeball2\Dodgeball2Character.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\Dodgeball2Character.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Dodgeball2\Dodgeball2GameMode.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\Dodgeball2GameMode.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Dodgeball2",
+			"Path": "C:\\Users\\me\\Documents\\Unreal Projects\\Dodgeball2\\Source\\Dodgeball2.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Dodgeball2Editor",
+			"Path": "C:\\Users\\me\\Documents\\Unreal Projects\\Dodgeball2\\Source\\Dodgeball2Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

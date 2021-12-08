@@ -1,0 +1,2 @@
+C:\Users\me\Documents\Unreal Projects\Dodgeball2\Intermediate\Build\Win64\UE4Editor\Development\Dodgeball2\Definitions.Dodgeball2.h
+C:\Users\me\Documents\Unreal Projects\Dodgeball2\Source\Dodgeball2\Dodgeball2.h
