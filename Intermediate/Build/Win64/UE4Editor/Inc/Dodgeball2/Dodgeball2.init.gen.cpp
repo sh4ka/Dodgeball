@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeDodgeball2_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x4D7A2D3F,
+				0x95AB0FD4,
 				0xAF3DD20C,
 				METADATA_PARAMS(nullptr, 0)
 			};
