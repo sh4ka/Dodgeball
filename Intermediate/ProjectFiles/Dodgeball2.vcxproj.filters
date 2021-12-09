@@ -54,4 +54,14 @@
       <Filter>Source\Dodgeball2</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Dodgeball2\EnemyCharacter.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Dodgeball2\EnemyCharacter.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
