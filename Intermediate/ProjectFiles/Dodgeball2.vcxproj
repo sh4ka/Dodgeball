@@ -630,8 +630,10 @@
   <ItemGroup>
     <ClCompile Include="..\..\Source\Dodgeball2\DodgeballProjectile.cpp" />
     <ClCompile Include="..\..\Source\Dodgeball2\EnemyCharacter.cpp" />
+    <ClCompile Include="..\..\Source\Dodgeball2\Wall.cpp" />
     <ClInclude Include="..\..\Source\Dodgeball2\DodgeballProjectile.h" />
     <ClInclude Include="..\..\Source\Dodgeball2\EnemyCharacter.h" />
+    <ClInclude Include="..\..\Source\Dodgeball2\Wall.h" />
     <None Include="..\..\Dodgeball2.uproject" />
     <None Include="..\..\Source\Dodgeball2.Target.cs" />
     <None Include="..\..\Source\Dodgeball2Editor.Target.cs" />

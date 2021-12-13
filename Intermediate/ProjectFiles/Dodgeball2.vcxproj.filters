@@ -61,12 +61,18 @@
     <ClInclude Include="..\..\Source\Dodgeball2\DodgeballProjectile.h">
       <Filter>Source\Dodgeball2</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Dodgeball2\Wall.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Dodgeball2\EnemyCharacter.cpp">
       <Filter>Source\Dodgeball2</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Dodgeball2\DodgeballProjectile.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball2\Wall.cpp">
       <Filter>Source\Dodgeball2</Filter>
     </ClCompile>
   </ItemGroup>
