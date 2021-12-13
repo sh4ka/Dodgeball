@@ -77,13 +77,13 @@ const
 
 	FVector Start = SightSource->GetComponentLocation();
 	FVector End = TargetActor->GetActorLocation();
-	ECollisionChannel Channel = ECollisionChannel::ECC_Visibility;
+	ECollisionChannel Channel = ECollisionChannel::ECC_GameTraceChannel1;
 
 	FCollisionQueryParams QueryParams;
 	QueryParams.AddIgnoredActor(this);
 	QueryParams.AddIgnoredActor(TargetActor);
 
-	GetWorld()->LineTraceSingleByChannel(Hit, Start, End, Channel);
+	GetWorld()->LineTraceSingleByChannel(Hit, Start, End, Channel, QueryParams);
 	DrawDebugLine(GetWorld(), Start, End, FColor::Red);
 
 	return !Hit.bBlockingHit;
