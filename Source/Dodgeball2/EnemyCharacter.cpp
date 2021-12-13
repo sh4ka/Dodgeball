@@ -2,10 +2,12 @@
 
 
 #include "EnemyCharacter.h"
+#include "DodgeballProjectile.h"
 #include "Engine/World.h"
 #include "DrawDebugHelpers.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/GameplayStatics.h"
+#include "TimerManager.h"
 
 // Sets default values
 AEnemyCharacter::AEnemyCharacter()
@@ -13,7 +15,7 @@ AEnemyCharacter::AEnemyCharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	SightSource = CreateDefaultSubobject<USceneComponent>(TEXT("LookFrom"));
-	SightSource->AttachTo(RootComponent);
+	SightSource->SetupAttachment(RootComponent);
 }
 
 // Called when the game starts or when spawned
@@ -23,13 +25,37 @@ void AEnemyCharacter::BeginPlay()
 	
 }
 
+void AEnemyCharacter::ThrowDodgeball()
+{
+	if (DodgeballClass == nullptr)
+	{
+		return;
+	}
+	FVector ForwardVector = GetActorForwardVector();
+	float SpawnDistance = 40.f;
+	FVector SpawnLocation = GetActorLocation() + (ForwardVector * SpawnDistance);
+	GetWorld()->SpawnActor<ADodgeballProjectile>(DodgeballClass, SpawnLocation, GetActorRotation());
+}
+
 // Called every frame
 void AEnemyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	ACharacter* PlayerCharacter = UGameplayStatics::GetPlayerCharacter(this, 0);
-	LookAtActor(PlayerCharacter);
+	bCanSeePlayer = LookAtActor(PlayerCharacter);
+	if (bCanSeePlayer != bPreviousCanSeePlayer)
+	{
+		if (bCanSeePlayer)
+		{
+			GetWorldTimerManager().SetTimer(ThrowTimerHandle, this, &AEnemyCharacter::ThrowDodgeball, ThrowingInterval, true, ThrowingDelay);
+		}
+		else
+		{
+			GetWorldTimerManager().ClearTimer(ThrowTimerHandle);
+		}
+	}
 
+	bPreviousCanSeePlayer = bCanSeePlayer;
 }
 
 // Called to bind functionality to input
@@ -63,17 +89,17 @@ const
 	return !Hit.bBlockingHit;
 }
 
-void AEnemyCharacter::LookAtActor(AActor* TargetActor)
+bool AEnemyCharacter::LookAtActor(AActor* TargetActor)
 {
-	if (TargetActor == nullptr)
-	{
-		return;
-	}
-	if (CanSeeActor(TargetActor))
+	if (TargetActor != nullptr && CanSeeActor(TargetActor))
 	{
 		FVector Start = GetActorLocation();
 		FVector End = TargetActor->GetActorLocation();
 		FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(Start, End);
 		SetActorRotation(LookAtRotation);
+
+		return true;
 	}
+
+	return false;
 }

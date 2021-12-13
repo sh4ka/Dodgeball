@@ -628,7 +628,9 @@
     <NMakeOutput>..\..\Binaries\LinuxAArch64\Dodgeball2-LinuxAArch64-Shipping</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Dodgeball2\DodgeballProjectile.cpp" />
     <ClCompile Include="..\..\Source\Dodgeball2\EnemyCharacter.cpp" />
+    <ClInclude Include="..\..\Source\Dodgeball2\DodgeballProjectile.h" />
     <ClInclude Include="..\..\Source\Dodgeball2\EnemyCharacter.h" />
     <None Include="..\..\Dodgeball2.uproject" />
     <None Include="..\..\Source\Dodgeball2.Target.cs" />
