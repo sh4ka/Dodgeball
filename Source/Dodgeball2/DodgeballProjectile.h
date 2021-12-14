@@ -24,6 +24,11 @@ public:
 	UFUNCTION()
 	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
+	FORCEINLINE class UProjectileMovementComponent* GetProjectileMovementComponent() const
+	{
+		return ProjectileMovement;
+	}
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
