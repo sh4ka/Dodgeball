@@ -4,7 +4,7 @@
 #include "EnemyCharacter.h"
 #include "DodgeballProjectile.h"
 #include "Engine/World.h"
-#include "DrawDebugHelpers.h"
+#include "DodgeballFunctionLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/GameplayStatics.h"
 #include "TimerManager.h"
@@ -72,33 +72,10 @@ void AEnemyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 
 }
 
-bool AEnemyCharacter::CanSeeActor(const AActor* TargetActor)
-const
-{
-	if (TargetActor == nullptr)
-	{
-		return false;
-	}
-
-	FHitResult Hit;
-
-	FVector Start = SightSource->GetComponentLocation();
-	FVector End = TargetActor->GetActorLocation();
-	ECollisionChannel Channel = ECollisionChannel::ECC_GameTraceChannel1;
-
-	FCollisionQueryParams QueryParams;
-	QueryParams.AddIgnoredActor(this);
-	QueryParams.AddIgnoredActor(TargetActor);
-
-	GetWorld()->LineTraceSingleByChannel(Hit, Start, End, Channel, QueryParams);
-	DrawDebugLine(GetWorld(), Start, End, FColor::Red);
-
-	return !Hit.bBlockingHit;
-}
-
 bool AEnemyCharacter::LookAtActor(AActor* TargetActor)
 {
-	if (TargetActor != nullptr && CanSeeActor(TargetActor))
+	const TArray<const AActor*> IgnoreActors = { this, TargetActor };
+	if (TargetActor != nullptr && UDodgeballFunctionLibrary::CanSeeActor(GetWorld(), SightSource->GetComponentLocation(), TargetActor, IgnoreActors))
 	{
 		FVector Start = GetActorLocation();
 		FVector End = TargetActor->GetActorLocation();

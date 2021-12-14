@@ -7,7 +7,8 @@ C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Users\me\Documents\Unreal Projects\Dodgeball2\Intermediate\Build\Win64\UE4Editor\Inc\Dodgeball2\EnemyCharacter.generated.h
 C:\Users\me\Documents\Unreal Projects\Dodgeball2\Source\Dodgeball2\DodgeballProjectile.h
 C:\Users\me\Documents\Unreal Projects\Dodgeball2\Intermediate\Build\Win64\UE4Editor\Inc\Dodgeball2\DodgeballProjectile.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
+C:\Users\me\Documents\Unreal Projects\Dodgeball2\Source\Dodgeball2\DodgeballFunctionLibrary.h
+C:\Users\me\Documents\Unreal Projects\Dodgeball2\Intermediate\Build\Win64\UE4Editor\Inc\Dodgeball2\DodgeballFunctionLibrary.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Kismet/KismetMathLibrary.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Core\Public\Misc/QualifiedFrameTime.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetMathLibrary.generated.h
