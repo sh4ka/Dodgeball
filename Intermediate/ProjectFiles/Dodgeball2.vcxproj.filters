@@ -70,6 +70,12 @@
     <ClInclude Include="..\..\Source\Dodgeball2\DodgeballFunctionLibrary.h">
       <Filter>Source\Dodgeball2</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Dodgeball2\HealthComponent.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Dodgeball2\HealthInterface.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Dodgeball2\EnemyCharacter.cpp">
@@ -85,6 +91,12 @@
       <Filter>Source\Dodgeball2</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Dodgeball2\DodgeballFunctionLibrary.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball2\HealthComponent.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Dodgeball2\HealthInterface.cpp">
       <Filter>Source\Dodgeball2</Filter>
     </ClCompile>
   </ItemGroup>

@@ -17,24 +17,29 @@ class DODGEBALL2_API ADodgeballProjectile : public AActor
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Dodgeball, meta = (AllowPrivateAccess = "true"))
 	class UProjectileMovementComponent* ProjectileMovement;
 	
+protected:
+
+	virtual void BeginPlay() override;
+
+	// The damage the dodgeball will deal to the player's character
+	UPROPERTY(EditAnywhere, Category = Damage)
+	float Damage = 34.f;
+
 public:	
-	// Sets default values for this actor's properties
+
 	ADodgeballProjectile();
 
-	UFUNCTION()
-	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+	virtual void Tick(float DeltaTime) override;
 
-	FORCEINLINE class UProjectileMovementComponent* GetProjectileMovementComponent() const
+	FORCEINLINE UProjectileMovementComponent* GetProjectileMovementComponent() const
 	{
 		return ProjectileMovement;
 	}
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
+	UFUNCTION()
+	void OnHit(UPrimitiveComponent* HitComp,
+			   AActor* OtherActor,
+			   UPrimitiveComponent* OtherComp,
+			   FVector NormalImpulse,
+			   const FHitResult& Hit);
 };

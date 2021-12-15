@@ -94,7 +94,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ADodgeballProjectile); \
 
 #define Dodgeball2_Source_Dodgeball2_DodgeballProjectile_h_12_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__SphereComponent() { return STRUCT_OFFSET(ADodgeballProjectile, SphereComponent); } \
-	FORCEINLINE static uint32 __PPO__ProjectileMovement() { return STRUCT_OFFSET(ADodgeballProjectile, ProjectileMovement); }
+	FORCEINLINE static uint32 __PPO__ProjectileMovement() { return STRUCT_OFFSET(ADodgeballProjectile, ProjectileMovement); } \
+	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(ADodgeballProjectile, Damage); }
 
 
 #define Dodgeball2_Source_Dodgeball2_DodgeballProjectile_h_9_PROLOG

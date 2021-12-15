@@ -12,7 +12,7 @@ class DODGEBALL2_API AEnemyCharacter : public ACharacter
 	GENERATED_BODY()
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = LookAt, meta = (AllowPrivateAccess = "true"))
-	class USceneComponent* SightSource;
+	class ULookAtActorComponent* LookAtActorComponent;
 
 public:
 	// Sets default values for this character's properties
@@ -38,8 +38,6 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	bool LookAtActor(AActor* TargetActor);
 
 	bool CanSeeActor(const AActor* TargetActor) const;
 

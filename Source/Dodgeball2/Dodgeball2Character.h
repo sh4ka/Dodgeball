@@ -4,10 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "HealthInterface.h"
 #include "Dodgeball2Character.generated.h"
 
 UCLASS(config=Game)
-class ADodgeball2Character : public ACharacter
+class ADodgeball2Character : public ACharacter, public IHealthInterface
 {
 	GENERATED_BODY()
 
@@ -18,6 +19,9 @@ class ADodgeball2Character : public ACharacter
 	/** Follow camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FollowCamera;
+
+	class UHealthComponent* HealthComponent;
+
 public:
 	ADodgeball2Character();
 
@@ -28,6 +32,8 @@ public:
 	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
+
+	virtual void OnDeath_Implementation() override;
 
 protected:
 

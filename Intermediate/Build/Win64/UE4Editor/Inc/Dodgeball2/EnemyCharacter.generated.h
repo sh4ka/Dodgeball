@@ -59,7 +59,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEnemyCharacter); \
 
 
 #define Dodgeball2_Source_Dodgeball2_EnemyCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__SightSource() { return STRUCT_OFFSET(AEnemyCharacter, SightSource); }
+	FORCEINLINE static uint32 __PPO__LookAtActorComponent() { return STRUCT_OFFSET(AEnemyCharacter, LookAtActorComponent); }
 
 
 #define Dodgeball2_Source_Dodgeball2_EnemyCharacter_h_9_PROLOG

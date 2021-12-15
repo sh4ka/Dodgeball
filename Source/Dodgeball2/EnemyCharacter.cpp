@@ -2,6 +2,7 @@
 
 
 #include "EnemyCharacter.h"
+#include "LookAtActorComponent.h"
 #include "DodgeballProjectile.h"
 #include "Engine/World.h"
 #include "DodgeballFunctionLibrary.h"
@@ -15,15 +16,16 @@ AEnemyCharacter::AEnemyCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	SightSource = CreateDefaultSubobject<USceneComponent>(TEXT("LookFrom"));
-	SightSource->SetupAttachment(RootComponent);
+	LookAtActorComponent = CreateDefaultSubobject<ULookAtActorComponent>(TEXT("Look at actor component"));	
+	LookAtActorComponent->SetupAttachment(RootComponent);
 }
 
 // Called when the game starts or when spawned
 void AEnemyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	ACharacter* PlayerCharacter = UGameplayStatics::GetPlayerCharacter(this, 0);
+	LookAtActorComponent->SetTarget(PlayerCharacter);	
 }
 
 void AEnemyCharacter::ThrowDodgeball()
@@ -48,8 +50,7 @@ void AEnemyCharacter::ThrowDodgeball()
 void AEnemyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	ACharacter* PlayerCharacter = UGameplayStatics::GetPlayerCharacter(this, 0);
-	bCanSeePlayer = LookAtActor(PlayerCharacter);
+	bCanSeePlayer = LookAtActorComponent->CanSeeTarget();
 	if (bCanSeePlayer != bPreviousCanSeePlayer)
 	{
 		if (bCanSeePlayer)
@@ -70,20 +71,4 @@ void AEnemyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-}
-
-bool AEnemyCharacter::LookAtActor(AActor* TargetActor)
-{
-	const TArray<const AActor*> IgnoreActors = { this, TargetActor };
-	if (TargetActor != nullptr && UDodgeballFunctionLibrary::CanSeeActor(GetWorld(), SightSource->GetComponentLocation(), TargetActor, IgnoreActors))
-	{
-		FVector Start = GetActorLocation();
-		FVector End = TargetActor->GetActorLocation();
-		FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(Start, End);
-		SetActorRotation(LookAtRotation);
-
-		return true;
-	}
-
-	return false;
 }

@@ -5,9 +5,12 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
+#include "HealthComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
+
 
 //////////////////////////////////////////////////////////////////////////
 // ADodgeball2Character
@@ -27,20 +30,26 @@ ADodgeball2Character::ADodgeball2Character()
 	bUseControllerRotationRoll = false;
 
 	// Configure character movement
-	GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...	
-	GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f); // ...at this rotation rate
+
+	// Character moves in the direction of input...	
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	// ...at this rotation rate
+	GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f);
 	GetCharacterMovement()->JumpZVelocity = 600.f;
 	GetCharacterMovement()->AirControl = 0.2f;
 
 	// Create a camera boom (pulls in towards the player if there is a collision)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
-	CameraBoom->TargetArmLength = 900.0f; // The camera follows at this distance behind the character	
+	// The camera follows at this distance behind the character
+	CameraBoom->TargetArmLength = 900.0f;
+	//The camera looks down at the player
 	CameraBoom->SetRelativeRotation(FRotator(-70.f, 0.f, 0.f));
-	CameraBoom->bUsePawnControlRotation = false; // Rotate the arm based on the controller
+	// Rotate the arm based on the controller
+	CameraBoom->bUsePawnControlRotation = false;
 	CameraBoom->bInheritPitch = false;
-	CameraBoom->bInheritRoll = false;
 	CameraBoom->bInheritYaw = false;
+	CameraBoom->bInheritRoll = false;
 
 	// Create a follow camera
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
@@ -49,6 +58,8 @@ ADodgeball2Character::ADodgeball2Character()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+
+	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health Component"));
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -71,6 +82,16 @@ void ADodgeball2Character::SetupPlayerInputComponent(class UInputComponent* Play
 }
 
 
+void ADodgeball2Character::OnDeath_Implementation()
+{
+	UKismetSystemLibrary::QuitGame(
+			this,
+			nullptr,
+			EQuitPreference::Quit,
+			true
+		);
+}
+
 void ADodgeball2Character::OnResetVR()
 {
 	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();
@@ -78,12 +99,12 @@ void ADodgeball2Character::OnResetVR()
 
 void ADodgeball2Character::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 {
-		Jump();
+	Jump();
 }
 
 void ADodgeball2Character::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 {
-		StopJumping();
+	StopJumping();
 }
 
 void ADodgeball2Character::MoveForward(float Value)

@@ -13,28 +13,30 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define DODGEBALL2_Dodgeball2Character_generated_h
 
-#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_SPARSE_DATA
-#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_RPC_WRAPPERS
-#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_INCLASS_NO_PURE_DECLS \
+#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_SPARSE_DATA
+#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_RPC_WRAPPERS
+#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesADodgeball2Character(); \
 	friend struct Z_Construct_UClass_ADodgeball2Character_Statics; \
 public: \
 	DECLARE_CLASS(ADodgeball2Character, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Dodgeball2"), NO_API) \
-	DECLARE_SERIALIZER(ADodgeball2Character)
+	DECLARE_SERIALIZER(ADodgeball2Character) \
+	virtual UObject* _getUObject() const override { return const_cast<ADodgeball2Character*>(this); }
 
 
-#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_INCLASS \
+#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_INCLASS \
 private: \
 	static void StaticRegisterNativesADodgeball2Character(); \
 	friend struct Z_Construct_UClass_ADodgeball2Character_Statics; \
 public: \
 	DECLARE_CLASS(ADodgeball2Character, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Dodgeball2"), NO_API) \
-	DECLARE_SERIALIZER(ADodgeball2Character)
+	DECLARE_SERIALIZER(ADodgeball2Character) \
+	virtual UObject* _getUObject() const override { return const_cast<ADodgeball2Character*>(this); }
 
 
-#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_STANDARD_CONSTRUCTORS \
+#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ADodgeball2Character(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ADodgeball2Character) \
@@ -47,7 +49,7 @@ private: \
 public:
 
 
-#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_ENHANCED_CONSTRUCTORS \
+#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ADodgeball2Character(ADodgeball2Character&&); \
@@ -58,32 +60,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ADodgeball2Character); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ADodgeball2Character)
 
 
-#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_PRIVATE_PROPERTY_OFFSET \
+#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ADodgeball2Character, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ADodgeball2Character, FollowCamera); }
 
 
-#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_9_PROLOG
-#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_GENERATED_BODY_LEGACY \
+#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_10_PROLOG
+#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_PRIVATE_PROPERTY_OFFSET \
-	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_SPARSE_DATA \
-	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_RPC_WRAPPERS \
-	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_INCLASS \
-	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_STANDARD_CONSTRUCTORS \
+	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_PRIVATE_PROPERTY_OFFSET \
+	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_SPARSE_DATA \
+	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_RPC_WRAPPERS \
+	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_INCLASS \
+	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_GENERATED_BODY \
+#define Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_PRIVATE_PROPERTY_OFFSET \
-	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_SPARSE_DATA \
-	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_INCLASS_NO_PURE_DECLS \
-	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_12_ENHANCED_CONSTRUCTORS \
+	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_PRIVATE_PROPERTY_OFFSET \
+	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_SPARSE_DATA \
+	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_INCLASS_NO_PURE_DECLS \
+	Dodgeball2_Source_Dodgeball2_Dodgeball2Character_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

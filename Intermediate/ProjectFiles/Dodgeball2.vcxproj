@@ -631,11 +631,17 @@
     <ClCompile Include="..\..\Source\Dodgeball2\DodgeballFunctionLibrary.cpp" />
     <ClCompile Include="..\..\Source\Dodgeball2\DodgeballProjectile.cpp" />
     <ClCompile Include="..\..\Source\Dodgeball2\EnemyCharacter.cpp" />
+    <ClCompile Include="..\..\Source\Dodgeball2\HealthComponent.cpp" />
+    <ClCompile Include="..\..\Source\Dodgeball2\HealthInterface.cpp" />
+    <ClCompile Include="..\..\Source\Dodgeball2\LookAtActorComponent.cpp" />
     <ClCompile Include="..\..\Source\Dodgeball2\VictoryBox.cpp" />
     <ClCompile Include="..\..\Source\Dodgeball2\Wall.cpp" />
     <ClInclude Include="..\..\Source\Dodgeball2\DodgeballFunctionLibrary.h" />
     <ClInclude Include="..\..\Source\Dodgeball2\DodgeballProjectile.h" />
     <ClInclude Include="..\..\Source\Dodgeball2\EnemyCharacter.h" />
+    <ClInclude Include="..\..\Source\Dodgeball2\HealthComponent.h" />
+    <ClInclude Include="..\..\Source\Dodgeball2\HealthInterface.h" />
+    <ClInclude Include="..\..\Source\Dodgeball2\LookAtActorComponent.h" />
     <ClInclude Include="..\..\Source\Dodgeball2\VictoryBox.h" />
     <ClInclude Include="..\..\Source\Dodgeball2\Wall.h" />
     <None Include="..\..\Dodgeball2.uproject" />

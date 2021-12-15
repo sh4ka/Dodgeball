@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeDodgeball2Character() {}
 	UPackage* Z_Construct_UPackage__Script_Dodgeball2();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
+	DODGEBALL2_API UClass* Z_Construct_UClass_UHealthInterface_NoRegister();
 // End Cross Module References
 	void ADodgeball2Character::StaticRegisterNativesADodgeball2Character()
 	{
@@ -50,6 +51,7 @@ void EmptyLinkFunctionForGeneratedCodeDodgeball2Character() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -110,6 +112,9 @@ void EmptyLinkFunctionForGeneratedCodeDodgeball2Character() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADodgeball2Character_Statics::NewProp_FollowCamera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADodgeball2Character_Statics::NewProp_CameraBoom,
 	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ADodgeball2Character_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UHealthInterface_NoRegister, (int32)VTABLE_OFFSET(ADodgeball2Character, IHealthInterface), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ADodgeball2Character_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ADodgeball2Character>::IsAbstract,
 	};
@@ -120,11 +125,11 @@ void EmptyLinkFunctionForGeneratedCodeDodgeball2Character() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_ADodgeball2Character_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_ADodgeball2Character_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x008000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_ADodgeball2Character_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ADodgeball2Character_Statics::Class_MetaDataParams))
 	};
@@ -137,7 +142,7 @@ void EmptyLinkFunctionForGeneratedCodeDodgeball2Character() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ADodgeball2Character, 179462792);
+	IMPLEMENT_CLASS(ADodgeball2Character, 690451691);
 	template<> DODGEBALL2_API UClass* StaticClass<ADodgeball2Character>()
 	{
 		return ADodgeball2Character::StaticClass();
