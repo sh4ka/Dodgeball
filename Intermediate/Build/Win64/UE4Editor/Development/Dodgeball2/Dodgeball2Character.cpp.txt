@@ -43,3 +43,5 @@ C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Kismet/
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+C:\Users\me\Documents\Unreal Projects\Dodgeball2\Source\Dodgeball2\DodgeballPlayerController.h
+C:\Users\me\Documents\Unreal Projects\Dodgeball2\Intermediate\Build\Win64\UE4Editor\Inc\Dodgeball2\DodgeballPlayerController.generated.h

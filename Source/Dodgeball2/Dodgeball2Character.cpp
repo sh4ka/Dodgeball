@@ -10,6 +10,7 @@
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "DodgeballPlayerController.h"
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -84,12 +85,11 @@ void ADodgeball2Character::SetupPlayerInputComponent(class UInputComponent* Play
 
 void ADodgeball2Character::OnDeath_Implementation()
 {
-	UKismetSystemLibrary::QuitGame(
-			this,
-			nullptr,
-			EQuitPreference::Quit,
-			true
-		);
+	ADodgeballPlayerController* PlayerController = Cast<ADodgeballPlayerController>(GetController());
+	if (PlayerController != nullptr)
+	{
+		PlayerController->ShowRestartWidget();
+	}
 }
 
 void ADodgeball2Character::OnResetVR()

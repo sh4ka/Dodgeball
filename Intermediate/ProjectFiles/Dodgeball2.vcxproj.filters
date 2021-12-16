@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Dodgeball2.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{CBC8DD2C-4D27-41B3-B067-993EA9CF90AF}</UniqueIdentifier>
+      <UniqueIdentifier>{D3421BBA-5D75-4367-A198-FF04E579C08B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Dodgeball2.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,10 @@
     <None Include="..\..\Source\Dodgeball2Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{5885C0DD-8CDF-4453-A18C-E09981C71810}</UniqueIdentifier>
+      <UniqueIdentifier>{1EAF4C28-0E4E-4610-953E-331111F12991}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Dodgeball2">
-      <UniqueIdentifier>{C5BED0D0-113C-4BFB-B32A-C64DFB16407B}</UniqueIdentifier>
+      <UniqueIdentifier>{A10C4370-BEC1-4786-8618-976672D90D73}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Dodgeball2\Dodgeball2.Build.cs">
       <Filter>Source\Dodgeball2</Filter>
@@ -53,51 +55,65 @@
     <ClInclude Include="..\..\Source\Dodgeball2\Dodgeball2GameMode.h">
       <Filter>Source\Dodgeball2</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Dodgeball2\EnemyCharacter.h">
-      <Filter>Source\Dodgeball2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Dodgeball2\DodgeballProjectile.h">
-      <Filter>Source\Dodgeball2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Dodgeball2\Wall.h">
-      <Filter>Source\Dodgeball2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Dodgeball2\VictoryBox.h">
-      <Filter>Source\Dodgeball2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Dodgeball2\DodgeballFunctionLibrary.h">
-      <Filter>Source\Dodgeball2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Dodgeball2\HealthComponent.h">
-      <Filter>Source\Dodgeball2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Dodgeball2\HealthInterface.h">
-      <Filter>Source\Dodgeball2</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\Dodgeball2\EnemyCharacter.cpp">
-      <Filter>Source\Dodgeball2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Dodgeball2\DodgeballProjectile.cpp">
-      <Filter>Source\Dodgeball2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Dodgeball2\Wall.cpp">
-      <Filter>Source\Dodgeball2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Dodgeball2\VictoryBox.cpp">
-      <Filter>Source\Dodgeball2</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Dodgeball2\DodgeballFunctionLibrary.cpp">
       <Filter>Source\Dodgeball2</Filter>
     </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\DodgeballFunctionLibrary.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Dodgeball2\DodgeballPlayerController.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\DodgeballPlayerController.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Dodgeball2\DodgeballProjectile.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\DodgeballProjectile.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Dodgeball2\EnemyCharacter.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\EnemyCharacter.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Dodgeball2\HealthComponent.cpp">
       <Filter>Source\Dodgeball2</Filter>
     </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\HealthComponent.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Dodgeball2\HealthInterface.cpp">
       <Filter>Source\Dodgeball2</Filter>
     </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\HealthInterface.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Dodgeball2\LookAtActorComponent.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\LookAtActorComponent.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Dodgeball2\RestartWidget.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\RestartWidget.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Dodgeball2\VictoryBox.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\VictoryBox.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Dodgeball2\Wall.cpp">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Dodgeball2\Wall.h">
+      <Filter>Source\Dodgeball2</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
