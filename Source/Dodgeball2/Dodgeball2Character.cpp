@@ -92,6 +92,15 @@ void ADodgeball2Character::OnDeath_Implementation()
 	}
 }
 
+void ADodgeball2Character::OnTakeDamage_Implementation()
+{
+	ADodgeballPlayerController* PlayerController = Cast<ADodgeballPlayerController>(GetController());
+	if (PlayerController != nullptr)
+	{
+		PlayerController->UpdateHealthPercent(HealthComponent->GetHealthPercent());
+	}
+}
+
 void ADodgeball2Character::OnResetVR()
 {
 	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();

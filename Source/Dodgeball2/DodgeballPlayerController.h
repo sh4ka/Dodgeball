@@ -17,11 +17,23 @@ class DODGEBALL2_API ADodgeballPlayerController : public APlayerController
 public:
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<class URestartWidget> BP_RestartWidget;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<class UHUDWidget> BP_HudWidget;
+	
 private:
 	UPROPERTY()
 	class URestartWidget* RestartWidget;
 
+	UPROPERTY()
+	class UHUDWidget* HUDWidget;
+
 public:
 	void ShowRestartWidget();
 	void HideRestartWidget();
+	void UpdateHealthPercent(float HealthPercent);
+
+protected:	
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 };
