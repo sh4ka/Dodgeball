@@ -661,7 +661,9 @@
     <ClCompile Include="..\..\Source\Dodgeball2\LookAtActorComponent.cpp" />
     <ClInclude Include="..\..\Source\Dodgeball2\HUDWidget.h" />
     <ClInclude Include="..\..\Source\Dodgeball2\LookAtActorComponent.h" />
+    <ClCompile Include="..\..\Source\Dodgeball2\MusicManager.cpp" />
     <ClCompile Include="..\..\Source\Dodgeball2\RestartWidget.cpp" />
+    <ClInclude Include="..\..\Source\Dodgeball2\MusicManager.h" />
     <ClInclude Include="..\..\Source\Dodgeball2\RestartWidget.h" />
     <ClCompile Include="..\..\Source\Dodgeball2\VictoryBox.cpp" />
     <ClInclude Include="..\..\Source\Dodgeball2\VictoryBox.h" />

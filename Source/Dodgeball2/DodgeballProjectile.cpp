@@ -1,11 +1,12 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "DodgeballProjectile.h"
 #include "Components/SphereComponent.h"
-#include "GameFramework/ProjectileMovementComponent.h"
+#include "DodgeballProjectile.h"
 #include "Dodgeball2Character.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 #include "HealthComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 ADodgeballProjectile::ADodgeballProjectile()
 {
@@ -48,6 +49,10 @@ void ADodgeballProjectile::OnHit(UPrimitiveComponent * HitComp,
 								 FVector NormalImpulse,
 								 const FHitResult & Hit)
 {
+	if (BounceSound != nullptr && NormalImpulse.Size() > 600.0f)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, BounceSound, GetActorLocation(), 1.0f, 1.0f, 0.0f, BounceSoundAttenuation);
+	}
 	ADodgeball2Character* Player = Cast<ADodgeball2Character>(OtherActor);
 	if (Player != nullptr)
 	{
