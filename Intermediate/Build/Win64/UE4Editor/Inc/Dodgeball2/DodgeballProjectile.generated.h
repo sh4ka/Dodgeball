@@ -96,8 +96,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ADodgeballProjectile); \
 	FORCEINLINE static uint32 __PPO__SphereComponent() { return STRUCT_OFFSET(ADodgeballProjectile, SphereComponent); } \
 	FORCEINLINE static uint32 __PPO__ProjectileMovement() { return STRUCT_OFFSET(ADodgeballProjectile, ProjectileMovement); } \
 	FORCEINLINE static uint32 __PPO__BounceSound() { return STRUCT_OFFSET(ADodgeballProjectile, BounceSound); } \
+	FORCEINLINE static uint32 __PPO__DamageSound() { return STRUCT_OFFSET(ADodgeballProjectile, DamageSound); } \
 	FORCEINLINE static uint32 __PPO__BounceSoundAttenuation() { return STRUCT_OFFSET(ADodgeballProjectile, BounceSoundAttenuation); } \
-	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(ADodgeballProjectile, Damage); }
+	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(ADodgeballProjectile, Damage); } \
+	FORCEINLINE static uint32 __PPO__HitParticles() { return STRUCT_OFFSET(ADodgeballProjectile, HitParticles); }
 
 
 #define Dodgeball2_Source_Dodgeball2_DodgeballProjectile_h_9_PROLOG

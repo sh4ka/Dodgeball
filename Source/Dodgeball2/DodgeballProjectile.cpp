@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Components/SphereComponent.h"
 #include "DodgeballProjectile.h"
+#include "Components/SphereComponent.h"
 #include "Dodgeball2Character.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "HealthComponent.h"
@@ -60,6 +60,14 @@ void ADodgeballProjectile::OnHit(UPrimitiveComponent * HitComp,
 		if (HealthComponent != nullptr)
 		{
 			HealthComponent->LoseHealth(Damage);
+		}
+		if (DamageSound != nullptr)
+		{
+			UGameplayStatics::PlaySound2D(this, DamageSound);
+		}
+		if (HitParticles != nullptr)
+		{
+			UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), HitParticles, GetActorTransform());
 		}
 		Destroy();
 	}

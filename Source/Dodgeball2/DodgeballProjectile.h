@@ -21,6 +21,9 @@ class DODGEBALL2_API ADodgeballProjectile : public AActor
 	class USoundBase* BounceSound;
 
 	UPROPERTY(EditAnywhere, Category = Sound)
+	class USoundBase* DamageSound;
+
+	UPROPERTY(EditAnywhere, Category = Sound)
 	class USoundAttenuation* BounceSoundAttenuation;
 	
 protected:
@@ -30,6 +33,9 @@ protected:
 	// The damage the dodgeball will deal to the player's character
 	UPROPERTY(EditAnywhere, Category = Damage)
 	float Damage = 34.f;
+	
+	UPROPERTY(EditAnywhere, Category = Particles)
+	class UParticleSystem* HitParticles;
 
 public:	
 
